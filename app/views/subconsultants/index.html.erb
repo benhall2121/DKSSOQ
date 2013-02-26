@@ -1,0 +1,33 @@
+<h1>Listing subconsultants</h1>
+
+<table>
+  <tr>
+    <th>Firm name</th>
+    <th>Contact name</th>
+    <th>Contact address</th>
+    <th>Contact phone</th>
+    <th>Contact fax</th>
+    <th>Contact email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @subconsultants.each do |subconsultant| %>
+  <tr>
+    <td><%= subconsultant.firm_name %></td>
+    <td><%= subconsultant.contact_name %></td>
+    <td><%= subconsultant.contact_address %></td>
+    <td><%= subconsultant.contact_phone %></td>
+    <td><%= subconsultant.contact_fax %></td>
+    <td><%= subconsultant.contact_email %></td>
+    <td><%= link_to 'Show', subconsultant %></td>
+    <td><%= link_to 'Edit', edit_subconsultant_path(subconsultant) %></td>
+    <td><%= link_to 'Destroy', subconsultant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Subconsultant', new_subconsultant_path %>

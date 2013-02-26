@@ -1,0 +1,451 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  anum: MyString
+  final: MyString
+  date: 2013-02-26
+  time: MyString
+  propoasal_manager: 1
+  coordinator: 1
+  reviewer: 1
+  coord_meeting_datetime: 2013-02-26
+  time: MyString
+  fee_total: 1.5
+  fee_dks: 1.5
+  prime_sub: 1
+  type_doc: 1
+  client_copies: 1
+  dks_staff_copies: 1
+  subconsultants_copies: 1
+  filing_copies: 1
+  delivery_by: 1
+  prod_page_limit: false
+  prod_single_sided: false
+  prod_divider_tabs: false
+  prod_graphics: false
+  prod_other_int: false
+  prod_other: MyString
+  prod_no: MyString
+  prod_double_sided: false
+  prod_no2: MyString
+  prod_subtabs: 1
+  prod_cover: false
+  prod_schedule: false
+  prod_org_chart: false
+  prod_special_instructions: MyString
+  delv_trans_name: MyString
+  delv_trans_address: MyString
+  delv_trans_attention: MyString
+  delv_deliver_name: MyString
+  delv_deliver_address: MyString
+  delv_deliver_attention: MyString
+  mand_subconsultant_resp: 1
+  mand_subconsultant_datetime: 2013-02-26
+  time: MyString
+  mand_subconsultant_reviewer: 1
+  mand_draft_resp: 1
+  mand_draft_datetime: 2013-02-26 00:13:00
+  mand_draft_reviewer: 1
+  mand_sub_final_edits_resp: 1
+  mand_sub_final_edits_datetime: 2013-02-26 00:13:00
+  mand_sub_final_edits_reviewer: 1
+  mand_cam_ready_resp: 1
+  mand_cam_ready_datetime: 2013-02-26 00:13:00
+  mand_cam_ready_reviewer: 1
+  mand_final_check_resp: 1
+  mand_final_check_datetime: 2013-02-26 00:13:00
+  mand_final_check_reviewer: 1
+  mand_print_bind_resp: 1
+  mand_print_bind_datetime: 2013-02-26 00:13:00
+  mand_print_bind_reviewer: 1
+  mand_out_door_deadline_resp: 1
+  mand_out_door_deadline_datetime: 2013-02-26 00:13:00
+  mand_out_door_deadline_reviewer: 1
+  dead_cov_sec: MyString
+  dead_cov_resp: 1
+  dead_cov_dd: 2013-02-26 00:13:00
+  dead_cov_fd: 1
+  dead_cov_rev: false
+  dead_cov_na: false
+  dead_cov_done: 2013-02-26 00:13:00
+  dead_stand_sec: MyString
+  dead_stand_resp: 1
+  dead_stand_dd: 2013-02-26 00:13:00
+  dead_stand_fd: 2013-02-26 00:13:00
+  dead_stand_rev: 1
+  dead_stand_na: false
+  dead_stand_done: false
+  dead_firm_sec: MyString
+  dead_firm_resp: 1
+  dead_firm_dd: 2013-02-26 00:13:00
+  dead_firm_fd: 2013-02-26 00:13:00
+  dead_firm_rev: 1
+  dead_firm_na: false
+  dead_firm_done: false
+  dead_lang_sec: MyString
+  dead_lang_resp: 1
+  dead_lang_dd: 2013-02-26 00:13:00
+  dead_lang_fc: 2013-02-26 00:13:00
+  dead_lang_rev: 1
+  dead_lang_na: false
+  dead_lang_done: false
+  dead_capsule_sec: MyString
+  dead_capsule_resp: 1
+  dead_capsule_dd: 2013-02-26 00:13:00
+  dead_capsule_fd: 2013-02-26 00:13:00
+  dead_capsule_rev: 1
+  dead_capsule_na: false
+  dead_capsule_done: false
+  dead_full_res_sec: MyString
+  dead_full_res_resp: 1
+  dead_full_res_dd: 2013-02-26 00:13:00
+  dead_full_res_fd: 2013-02-26 00:13:00
+  dead_full_res_rev: 1
+  dead_full_res_na: false
+  dead_full_res_done: false
+  dead_graph_cover_sec: MyString
+  dead_graph_cover_resp: 1
+  dead_graph_cover_dd: 2013-02-26 00:13:00
+  dead_graph_cover_fd: 2013-02-26 00:13:00
+  dead_graph_cover_rev: 1
+  dead_graph_cover_na: false
+  dead_graph_cover_done: false
+  dead_graph_org_sec: MyString
+  dead_graph_org_resp: 1
+  dead_graph_org_dd: 2013-02-26 00:13:00
+  dead_graph_org_fc: 2013-02-26 00:13:00
+  dead_graph_org_rev: 1
+  dead_graph_org_na: false
+  dead_graph_org_done: false
+  dead_graph_sch_sec: MyString
+  dead_graph_sch_resp: 1
+  dead_graph_sch_dd: 2013-02-26 00:13:00
+  dead_graph_sch_fc: 2013-02-26 00:13:00
+  dead_graph_sch_rev: 1
+  dead_graph_sch_na: false
+  dead_graph_sch_done: false
+  dead_graphics_sec: MyString
+  dead_graphics_resp: 1
+  dead_graphics_dd: 2013-02-26 00:13:00
+  dead_graphics_fc: 2013-02-26 00:13:00
+  dead_graphics_rev: 1
+  dead_graphics_na: false
+  dead_graphics_done: false
+  dead_text_work_scope_sec: MyString
+  dead_text_work_scope_resp: 1
+  dead_text_work_scope_dd: 2013-02-26 00:13:00
+  dead_text_work_scope_fd: 2013-02-26 00:13:00
+  dead_text_work_scope_rev: 1
+  dead_text_work_scope_na: false
+  dead_text_work_scope_done: false
+  dead_text_qual_sec: MyString
+  dead_text_qual_resp: 1
+  dead_text_qual_dd: 2013-02-26 00:13:00
+  dead_text_qual_fd: 2013-02-26 00:13:00
+  dead_text_qual_rev: 1
+  dead_text_qual_na: false
+  dead_text_qual_done: false
+  dead_text_res_sec: MyString
+  dead_text_res_resp: 1
+  dead_text_res_dd: 2013-02-26 00:13:00
+  dead_text_res_fd: 2013-02-26 00:13:00
+  dead_text_res_rev: 1
+  dead_text_res_na: false
+  dead_text_res_done: false
+  dead_text_short_sec: MyString
+  dead_text_short_resp: 1
+  dead_text_short_dd: 2013-02-26 00:13:00
+  dead_text_short_fd: 2013-02-26 00:13:00
+  dead_text_short_rev: 1
+  dead_text_short_na: false
+  dead_text_short_done: false
+  dead_text_und_sec: MyString
+  dead_text_und_resp: 1
+  dead_text_und_dd: 2013-02-26 00:13:00
+  dead_text_und_fd: 2013-02-26 00:13:00
+  dead_text_und_rev: 1
+  dead_text_und_na: false
+  dead_text_und_done: false
+  dead_text_sec: MyString
+  dead_text_resp: 1
+  dead_text_dd: 2013-02-26 00:13:00
+  dead_text_fd: 2013-02-26 00:13:00
+  dead_text_rev: 1
+  dead_text_na: false
+  dead_text_done: false
+  dead_div_tabs_sec: MyString
+  dead_div_tabs_resp: 1
+  dead_div_tabs_dd: 2013-02-26 00:13:00
+  dead_div_tabs_fd: 2013-02-26 00:13:00
+  dead_div_tabs_rev: 1
+  dead_div_tabs_na: false
+  dead_div_tabs_done: false
+  dead_spec_form_sec: MyString
+  dead_spec_form_resp: 1
+  dead_spec_form_dd: 2013-02-26 00:13:00
+  dead_spec_form_fd: 2013-02-26 00:13:00
+  dead_spec_form_rev: 1
+  dead_spec_form_na: false
+  dead_spec_form_done: false
+  dead_bud_est_sec: MyString
+  dead_bud_est_resp: 1
+  dead_bud_est_dd: 2013-02-26 00:13:00
+  dead_bud_est_fd: 2013-02-26 00:13:00
+  dead_bud_est_rev: 1
+  dead_bud_est_na: false
+  dead_bud_est_done: false
+  dead_cont_rev_sec: MyString
+  dead_cont_rev_resp: 1
+  dead_cont_rev_dd: 2013-02-26 00:13:00
+  dead_cont_rev_fd: 2013-02-26 00:13:00
+  dead_cont_rev_rev: 1
+  dead_cont_rev_na: false
+  dead_cont_rev_done: false
+  dead_work_ex_sec: MyString
+  dead_work_ex_resp: 1
+  dead_work_ex_dd: 2013-02-26 00:13:00
+  dead_work_ex_fd: 2013-02-26 00:13:00
+  dead_work_ex_rev: 1
+  dead_work_ex_na: false
+  dead_work_ex_done: false
+  attachments_customized_outline: false
+  attachments_subconsultant_details: false
+  item_needed_dead_resume_num: 1
+  item_needed_dead_resume_due_date: false
+  item_needed_dead_resume_req_sub_num: 1
+  item_needed_dead_short_bio_due_date: false
+  item_needed_dead_short_bio_req_sub_num: 1
+  item_needed_dead_firm_profile_due_date: false
+  item_needed_dead_firm_profile_req_sub_num: 1
+  item_needed_dead_quals_due_date: false
+  item_needed_dead_quals_req_sub_num: 1
+  item_needed_dead_task_desc_due_date: false
+  item_needed_dead_task_desc_req_sub_num: 1
+  item_needed_dead_bud_est_due_date: false
+  item_needed_dead_bud_est_req_sub_num: 1
+
+two:
+  name: MyString
+  anum: MyString
+  final: MyString
+  date: 2013-02-26
+  time: MyString
+  propoasal_manager: 1
+  coordinator: 1
+  reviewer: 1
+  coord_meeting_datetime: 2013-02-26
+  time: MyString
+  fee_total: 1.5
+  fee_dks: 1.5
+  prime_sub: 1
+  type_doc: 1
+  client_copies: 1
+  dks_staff_copies: 1
+  subconsultants_copies: 1
+  filing_copies: 1
+  delivery_by: 1
+  prod_page_limit: false
+  prod_single_sided: false
+  prod_divider_tabs: false
+  prod_graphics: false
+  prod_other_int: false
+  prod_other: MyString
+  prod_no: MyString
+  prod_double_sided: false
+  prod_no2: MyString
+  prod_subtabs: 1
+  prod_cover: false
+  prod_schedule: false
+  prod_org_chart: false
+  prod_special_instructions: MyString
+  delv_trans_name: MyString
+  delv_trans_address: MyString
+  delv_trans_attention: MyString
+  delv_deliver_name: MyString
+  delv_deliver_address: MyString
+  delv_deliver_attention: MyString
+  mand_subconsultant_resp: 1
+  mand_subconsultant_datetime: 2013-02-26
+  time: MyString
+  mand_subconsultant_reviewer: 1
+  mand_draft_resp: 1
+  mand_draft_datetime: 2013-02-26 00:13:00
+  mand_draft_reviewer: 1
+  mand_sub_final_edits_resp: 1
+  mand_sub_final_edits_datetime: 2013-02-26 00:13:00
+  mand_sub_final_edits_reviewer: 1
+  mand_cam_ready_resp: 1
+  mand_cam_ready_datetime: 2013-02-26 00:13:00
+  mand_cam_ready_reviewer: 1
+  mand_final_check_resp: 1
+  mand_final_check_datetime: 2013-02-26 00:13:00
+  mand_final_check_reviewer: 1
+  mand_print_bind_resp: 1
+  mand_print_bind_datetime: 2013-02-26 00:13:00
+  mand_print_bind_reviewer: 1
+  mand_out_door_deadline_resp: 1
+  mand_out_door_deadline_datetime: 2013-02-26 00:13:00
+  mand_out_door_deadline_reviewer: 1
+  dead_cov_sec: MyString
+  dead_cov_resp: 1
+  dead_cov_dd: 2013-02-26 00:13:00
+  dead_cov_fd: 1
+  dead_cov_rev: false
+  dead_cov_na: false
+  dead_cov_done: 2013-02-26 00:13:00
+  dead_stand_sec: MyString
+  dead_stand_resp: 1
+  dead_stand_dd: 2013-02-26 00:13:00
+  dead_stand_fd: 2013-02-26 00:13:00
+  dead_stand_rev: 1
+  dead_stand_na: false
+  dead_stand_done: false
+  dead_firm_sec: MyString
+  dead_firm_resp: 1
+  dead_firm_dd: 2013-02-26 00:13:00
+  dead_firm_fd: 2013-02-26 00:13:00
+  dead_firm_rev: 1
+  dead_firm_na: false
+  dead_firm_done: false
+  dead_lang_sec: MyString
+  dead_lang_resp: 1
+  dead_lang_dd: 2013-02-26 00:13:00
+  dead_lang_fc: 2013-02-26 00:13:00
+  dead_lang_rev: 1
+  dead_lang_na: false
+  dead_lang_done: false
+  dead_capsule_sec: MyString
+  dead_capsule_resp: 1
+  dead_capsule_dd: 2013-02-26 00:13:00
+  dead_capsule_fd: 2013-02-26 00:13:00
+  dead_capsule_rev: 1
+  dead_capsule_na: false
+  dead_capsule_done: false
+  dead_full_res_sec: MyString
+  dead_full_res_resp: 1
+  dead_full_res_dd: 2013-02-26 00:13:00
+  dead_full_res_fd: 2013-02-26 00:13:00
+  dead_full_res_rev: 1
+  dead_full_res_na: false
+  dead_full_res_done: false
+  dead_graph_cover_sec: MyString
+  dead_graph_cover_resp: 1
+  dead_graph_cover_dd: 2013-02-26 00:13:00
+  dead_graph_cover_fd: 2013-02-26 00:13:00
+  dead_graph_cover_rev: 1
+  dead_graph_cover_na: false
+  dead_graph_cover_done: false
+  dead_graph_org_sec: MyString
+  dead_graph_org_resp: 1
+  dead_graph_org_dd: 2013-02-26 00:13:00
+  dead_graph_org_fc: 2013-02-26 00:13:00
+  dead_graph_org_rev: 1
+  dead_graph_org_na: false
+  dead_graph_org_done: false
+  dead_graph_sch_sec: MyString
+  dead_graph_sch_resp: 1
+  dead_graph_sch_dd: 2013-02-26 00:13:00
+  dead_graph_sch_fc: 2013-02-26 00:13:00
+  dead_graph_sch_rev: 1
+  dead_graph_sch_na: false
+  dead_graph_sch_done: false
+  dead_graphics_sec: MyString
+  dead_graphics_resp: 1
+  dead_graphics_dd: 2013-02-26 00:13:00
+  dead_graphics_fc: 2013-02-26 00:13:00
+  dead_graphics_rev: 1
+  dead_graphics_na: false
+  dead_graphics_done: false
+  dead_text_work_scope_sec: MyString
+  dead_text_work_scope_resp: 1
+  dead_text_work_scope_dd: 2013-02-26 00:13:00
+  dead_text_work_scope_fd: 2013-02-26 00:13:00
+  dead_text_work_scope_rev: 1
+  dead_text_work_scope_na: false
+  dead_text_work_scope_done: false
+  dead_text_qual_sec: MyString
+  dead_text_qual_resp: 1
+  dead_text_qual_dd: 2013-02-26 00:13:00
+  dead_text_qual_fd: 2013-02-26 00:13:00
+  dead_text_qual_rev: 1
+  dead_text_qual_na: false
+  dead_text_qual_done: false
+  dead_text_res_sec: MyString
+  dead_text_res_resp: 1
+  dead_text_res_dd: 2013-02-26 00:13:00
+  dead_text_res_fd: 2013-02-26 00:13:00
+  dead_text_res_rev: 1
+  dead_text_res_na: false
+  dead_text_res_done: false
+  dead_text_short_sec: MyString
+  dead_text_short_resp: 1
+  dead_text_short_dd: 2013-02-26 00:13:00
+  dead_text_short_fd: 2013-02-26 00:13:00
+  dead_text_short_rev: 1
+  dead_text_short_na: false
+  dead_text_short_done: false
+  dead_text_und_sec: MyString
+  dead_text_und_resp: 1
+  dead_text_und_dd: 2013-02-26 00:13:00
+  dead_text_und_fd: 2013-02-26 00:13:00
+  dead_text_und_rev: 1
+  dead_text_und_na: false
+  dead_text_und_done: false
+  dead_text_sec: MyString
+  dead_text_resp: 1
+  dead_text_dd: 2013-02-26 00:13:00
+  dead_text_fd: 2013-02-26 00:13:00
+  dead_text_rev: 1
+  dead_text_na: false
+  dead_text_done: false
+  dead_div_tabs_sec: MyString
+  dead_div_tabs_resp: 1
+  dead_div_tabs_dd: 2013-02-26 00:13:00
+  dead_div_tabs_fd: 2013-02-26 00:13:00
+  dead_div_tabs_rev: 1
+  dead_div_tabs_na: false
+  dead_div_tabs_done: false
+  dead_spec_form_sec: MyString
+  dead_spec_form_resp: 1
+  dead_spec_form_dd: 2013-02-26 00:13:00
+  dead_spec_form_fd: 2013-02-26 00:13:00
+  dead_spec_form_rev: 1
+  dead_spec_form_na: false
+  dead_spec_form_done: false
+  dead_bud_est_sec: MyString
+  dead_bud_est_resp: 1
+  dead_bud_est_dd: 2013-02-26 00:13:00
+  dead_bud_est_fd: 2013-02-26 00:13:00
+  dead_bud_est_rev: 1
+  dead_bud_est_na: false
+  dead_bud_est_done: false
+  dead_cont_rev_sec: MyString
+  dead_cont_rev_resp: 1
+  dead_cont_rev_dd: 2013-02-26 00:13:00
+  dead_cont_rev_fd: 2013-02-26 00:13:00
+  dead_cont_rev_rev: 1
+  dead_cont_rev_na: false
+  dead_cont_rev_done: false
+  dead_work_ex_sec: MyString
+  dead_work_ex_resp: 1
+  dead_work_ex_dd: 2013-02-26 00:13:00
+  dead_work_ex_fd: 2013-02-26 00:13:00
+  dead_work_ex_rev: 1
+  dead_work_ex_na: false
+  dead_work_ex_done: false
+  attachments_customized_outline: false
+  attachments_subconsultant_details: false
+  item_needed_dead_resume_num: 1
+  item_needed_dead_resume_due_date: false
+  item_needed_dead_resume_req_sub_num: 1
+  item_needed_dead_short_bio_due_date: false
+  item_needed_dead_short_bio_req_sub_num: 1
+  item_needed_dead_firm_profile_due_date: false
+  item_needed_dead_firm_profile_req_sub_num: 1
+  item_needed_dead_quals_due_date: false
+  item_needed_dead_quals_req_sub_num: 1
+  item_needed_dead_task_desc_due_date: false
+  item_needed_dead_task_desc_req_sub_num: 1
+  item_needed_dead_bud_est_due_date: false
+  item_needed_dead_bud_est_req_sub_num: 1

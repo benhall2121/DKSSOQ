@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DKSSOQ</title>
+  <title>DKS PROPOSAL / SOQ PREPARATION PLAN</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2677869-25']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
 </head>
 <body>
+      
+      <div class="navbar navbar-inner navbar-straightCorners main_margin">
+        <div class="container">
+          <%= link_to '<span class="logo">DKS</span>'.html_safe, root_path, :class => 'brand' %>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="<%= 'active' if params[:controller] == 'users' && params[:action] == 'home' %>"><%= link_to 'Home', root_path %></li>
+            </ul>
+            <% if current_user %>
+            <ul class="nav pull-right">
+              <li><%= link_to "Logged in as " + current_user.email + ".", user_path(current_user) %></li>
+              <%= link_to "Log out", log_out_path, :class => 'btn btn-green' %>
+            </ul>
+            <% else %>
+              <%= form_tag sessions_path, :class => 'pull-right navbar-form' do %>
+                <%= text_field_tag :email, params[:email], :class => 'span2', :placeholder => "Email" %>
+                <%= password_field_tag :password, '', :class => 'span2', :placeholder => 'Password' %>
+                <%= submit_tag "Log in", :class => 'btn btn-green' %>
+              <% end %>
+            <% end %>
 
-<%= yield %>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+  <% flash.each do |name, msg| %>
+    <div class="row container flash_container main_margin">
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    </div>
+  <% end %>
+
+<div class="main_margin container">
+  <%= yield %>
+</div>
+
+<div class="main_margin container footer">
+    &#169; DKS Associates <%= Time.now.year %>
+</div>
 
 </body>
 </html>

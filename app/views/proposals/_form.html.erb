@@ -1,0 +1,712 @@
+<%= form_for(@proposal) do |f| %>
+  <% if @proposal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@proposal.errors.count, "error") %> prohibited this proposal from being saved:</h2>
+
+      <ul>
+      <% @proposal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<!-- Start Section Wrapper -->
+<div class="section_wrapper right_form">
+
+  <div class="row">
+    <div class="span1">
+      Name:
+    </div>
+    <div class="span10">
+       <%= f.text_field :name %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span1">
+      A#:
+    </div>
+    <div class="span3">
+      <%= f.text_field :anum %>
+    </div>
+    <div class="span3">
+      Final Due Date and Time:
+    </div>
+    <div class="span4">
+      <%= f.text_field :date, :class => 'timezone_datepicker' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span2">
+      Proposal Manager:
+    </div>
+    <div class="span2">
+      <%= f.text_field :propoasal_manager %>
+    </div>
+    <div class="span1">
+      Coordinator:
+    </div>
+    <div class="span2">
+      <%= f.text_field :coordinator %>
+    </div>
+    <div class="span2">
+      P.I.C. / Reviewer:
+    </div>
+    <div class="span2">
+      <%= f.text_field :reviewer %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span3">
+        Coordination Meeting Date/Time:
+        <%= f.text_field :coord_meeting_datetime, :class => 'timezone_datepicker' %>
+    </div>
+    <div class="span5">
+      <div class="span1">
+        Fee:
+      </div>
+      <div class="span3">
+        <div class="span1">
+          Total: 
+        </div>
+        <div class="span1">
+          <%= f.text_field :fee_total %>
+        </div>
+        <div class="span1">
+          DKS:
+        </div>
+        <div class="span1">
+          <%= f.text_field :fee_dks %>
+        </div>
+      </div>
+    </div>
+    <div class="span3">
+      DKS Is: <%= f.text_field :prime_sub %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span3">
+      Type of Document: <%= f.text_field :type_doc %>
+    </div>
+    <div class="span5">
+      <div class="span1">
+        No. Copies 
+      </div>
+      <div class="span3" style="text-align:left;">
+        <div class="row">
+          <div class="span1">
+            <%= f.text_field :client_copies %>
+          </div>
+          <div class="span2">
+            Client
+          </div>
+        </div>
+        <div class="row">
+          <div class="span1">
+            <%= f.text_field :dks_staff_copies %>
+          </div>
+          <div class="span2">
+            DKS Staff
+          </div>
+        </div>
+        <div class="row">
+          <div class="span1">
+            <%= f.text_field :subconsultants_copies %>
+          </div>
+          <div class="span2">
+            Subconsultants
+          </div>
+        </div>
+        <div class="row">
+          <div class="span1">
+            <%= f.text_field :filing_copies %>
+          </div>
+          <div class="span2">
+            Filing (1 unbound)
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="span3">
+      Delvery By: <%= f.text_field :delivery_by %>
+    </div>
+  </div>
+  
+</div>
+<!-- END SECTION WRAPPER -->
+
+<!-- Start Section Wrapper -->
+<div class="section_wrapper green">
+  <h4 class="section_header">
+    Production Information – DEM
+  </h4>
+
+
+  <div class="row span3">
+    <div class="row">
+      <div class="span3">
+        <%= f.check_box :prod_page_limit %>
+        Page Limit
+      </div>
+    </div>
+    <div class="row">
+      <div class="span3">
+        <%= f.check_box :prod_single_sided %>
+        Single-Sided
+      </div>
+    </div>
+    <div class="row">
+      <div class="span3">
+        <%= f.check_box :prod_divider_tabs %>
+        Divider Tabs
+      </div>
+    </div>
+    <div class="row">
+      <div class="span3">
+        <%= f.check_box :prod_graphics %>
+        Graphics
+      </div>
+    </div>
+    <div class="row">
+      <div class="span">
+        <%= f.check_box :prod_other_int %>
+        Other
+      </div>
+    </div>
+  </div>
+
+  <div class="row span4">
+    <div class="row">
+      <div class="span1">
+        No.
+      </div>
+      <div class="span2">
+        <%= f.text_field :prod_no %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span3">
+        <%= f.check_box :prod_double_sided %>
+        Double-Sided
+      </div>
+    </div>
+    <div class="row">
+      <div class="span1">
+        No. Sub Tabs
+      </div>
+      <div class="span2">
+        <%= f.text_field :prod_no2 %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span3">
+        <%= f.check_box :prod_cover %>
+        Cover
+      </div>
+      <div class="span3">
+        <%= f.check_box :prod_schedule %>
+        Schedule
+      </div>
+      <div class="span3">
+        <%= f.check_box :prod_org_chart %>
+        Org Chart
+      </div>
+    </div>
+  </div>
+
+  <div class="row span3">
+    <div class="row">
+        Special Instructions for Production/Copying:
+    </div>
+    <div class="row">
+        <%= f.text_area :prod_special_instructions %>
+    </div>
+  </div>
+
+ 
+</div>
+<!-- END SECTION WRAPPER -->
+
+<!-- Start Section Wrapper -->
+<div class="section_wrapper">
+  <h4 class="section_header">
+    Delivery Information - DEM
+  </h4>
+
+
+  <div class="row span5 right_form">
+    <div class="row" style='text-align:center;font-weight:bold;'>
+      Transmittal letter
+    </div>
+    <div class="row">
+      <div class="row">
+        <div class="span2">
+          Name:
+        </div>
+        <div class="span3">
+          <%= f.text_field :delv_trans_name %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span2">
+          Address:
+        </div>
+        <div class="span3">
+          <%= f.text_area :delv_trans_address %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span2">
+          Attention:
+        </div>
+        <div class="span3">
+          <%= f.text_field :delv_trans_attention %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row span5 right_form">
+    <div class="row" style='text-align:center;font-weight:bold;'>
+      Deliver To
+    </div>
+    <div class="row">
+      <div class="row">
+        <div class="span2">
+          Name:
+        </div>
+        <div class="span3">
+          <%= f.text_field :delv_deliver_name %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span2">
+          Address:
+        </div>
+        <div class="span3">
+          <%= f.text_area :delv_deliver_address %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span2">
+          Attention:
+        </div>
+        <div class="span3">
+          <%= f.text_field :delv_deliver_attention %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- END SECTION WRAPPER -->
+
+<!-- Start Section Wrapper -->
+<div class="section_wrapper">
+  <h4 class="section_header">
+    Mandatory Deadlines
+  </h4>
+
+  <table class="table table-striped">
+    <tr>
+      <th>Item</th>
+      <th>Responsible</th>
+      <th>Date/Time</th>
+      <th>Reviewer</th>
+    </tr>
+
+    <tr>
+      <td>Subconsultant Material</td>
+      <td><%= f.text_field :mand_subconsultant_resp %></td>
+      <td><%= f.text_field :mand_subconsultant_datetime, :class => 'timezone_datepicker' %></td>
+      <td><%= f.text_field :mand_subconsultant_reviewer %></td>
+    </tr>
+    <tr>
+      <td>Draft</td>
+      <td><%= f.text_field :mand_draft_resp %></td>
+      <td><%= f.text_field :mand_draft_datetime, :class => 'timezone_datepicker' %></td>
+      <td><%= f.text_field :mand_draft_reviewer %></td>
+    </tr>
+    <tr>
+      <td>Submit Final Edits</td>
+      <td><%= f.text_field :mand_sub_final_edits_resp %></td>
+      <td><%= f.text_field :mand_sub_final_edits_datetime, :class => 'timezone_datepicker' %></td>
+      <td><%= f.text_field :mand_sub_final_edits_reviewer %></td>
+    </tr>
+    <tr>
+      <td>Camera-Ready Final</td>
+      <td><%= f.text_field :mand_cam_ready_resp %></td>
+      <td><%= f.text_field :mand_cam_ready_datetime, :class => 'timezone_datepicker' %></td>
+      <td><%= f.text_field :mand_cam_ready_reviewer %></td>
+    </tr>
+    <tr>
+      <td>Final Check</td>
+      <td><%= f.text_field :mand_final_check_resp %></td>
+      <td><%= f.text_field :mand_final_check_datetime, :class => 'timezone_datepicker' %></td>
+      <td><%= f.text_field :mand_final_check_reviewer %></td>
+    </tr>
+    <tr>
+      <td>Printing/Binding</td>
+      <td><%= f.text_field :mand_print_bind_resp %></td>
+      <td><%= f.text_field :mand_print_bind_datetime, :class => 'timezone_datepicker' %></td>
+      <td><%= f.text_field :mand_print_bind_reviewer %></td>
+    </tr>
+    <tr>
+      <td>Out-the-Door Deadline</td>
+      <td><%= f.text_field :mand_out_door_deadline_resp %></td>
+      <td><%= f.text_field :mand_out_door_deadline_datetime, :class => 'timezone_datepicker' %></td>
+      <td><%= f.text_field :mand_out_door_deadline_reviewer %></td>
+    </tr>
+  </table>
+
+</div>
+<!-- END SECTION WRAPPER -->
+
+<!-- Start Section Wrapper -->
+<div class="section_wrapper">
+  <h4 class="section_header">
+    Standard Outline
+  </h4>
+  
+</div>
+<!-- END SECTION WRAPPER -->
+
+<!-- Start Section Wrapper -->
+<div class="section_wrapper">
+  <h4 class="section_header">
+    Deadlines
+  </h4>
+  
+  <table class="table table-striped">
+    <tr>
+      <th>Standard Items</th>
+      <th>Section #</th>
+      <th>Responsible</th>
+      <th>Draft Due</th>
+      <th>Final Due</th>
+      <th>Reviewer</th>
+      <th>N/A</th>
+      <th>Done</th>
+    </tr>
+    <tr>
+      <td>Cover Letter</td>
+      <td><%= f.text_field :dead_cov_sec %></td>
+      <td><%= f.text_field :dead_cov_resp %></td>
+      <td><%= f.text_field :dead_cov_dd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_cov_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_cov_rev %></td>
+      <td><%= f.check_box :dead_cov_na %></td>
+      <td><%= f.check_box :dead_cov_done %></td>
+    </tr>
+    <tr>
+      <td>Standard Quals</td>
+      <td><%= f.text_field :dead_stand_sec %></td>
+      <td><%= f.text_field :dead_stand_resp %></td>
+      <td><%= f.text_field :dead_stand_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_stand_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_stand_rev %></td>
+      <td><%= f.check_box :dead_stand_na %></td>
+      <td><%= f.check_box :dead_stand_done %></td>
+    </tr>
+    <tr>
+      <td>Firm Profile</td>
+      <td><%= f.text_field :dead_firm_sec %></td>
+      <td><%= f.text_field :dead_firm_resp %></td>
+      <td><%= f.text_field :dead_firm_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_firm_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_firm_rev %></td>
+      <td><%= f.check_box :dead_firm_na %></td>
+      <td><%= f.check_box :dead_firm_done %></td>
+    </tr>
+    <tr>
+      <td>Contractual Language</td>
+      <td><%= f.text_field :dead_lang_sec %></td>
+      <td><%= f.text_field :dead_lang_resp %></td>
+      <td><%= f.text_field :dead_lang_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_lang_fc, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_lang_rev %></td>
+      <td><%= f.check_box :dead_lang_na %></td>
+      <td><%= f.check_box :dead_lang_done %></td>
+    </tr>
+    <tr>
+      <td>Capsule Resumes</td>
+      <td><%= f.text_field :dead_capsule_sec %></td>
+      <td><%= f.text_field :dead_capsule_resp %></td>
+      <td><%= f.text_field :dead_capsule_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_capsule_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_capsule_rev %></td>
+      <td><%= f.check_box :dead_capsule_na %></td>
+      <td><%= f.check_box :dead_capsule_done %></td>
+    </tr>
+    <tr>
+      <td>Full Resumes (1 or 2 pages)</td>
+      <td><%= f.text_field :dead_full_res_sec %></td>
+      <td><%= f.text_field :dead_full_res_resp %></td>
+      <td><%= f.text_field :dead_full_res_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_full_res_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_full_res_rev %></td>
+      <td><%= f.check_box :dead_full_res_na %></td>
+      <td><%= f.check_box :dead_full_res_done %></td>
+    </tr>
+    <tr>
+      <td>Graphics - Cover</td>
+      <td><%= f.text_field :dead_graph_cover_sec %></td>
+      <td><%= f.text_field :dead_graph_cover_resp %></td>
+      <td><%= f.text_field :dead_graph_cover_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_graph_cover_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_graph_cover_rev %></td>
+      <td><%= f.check_box :dead_graph_cover_na %></td>
+      <td><%= f.check_box :dead_graph_cover_done %></td>
+    </tr>
+    <tr>
+      <td>Graphics - Org Chart</td>
+      <td><%= f.text_field :dead_graph_org_sec %></td>
+      <td><%= f.text_field :dead_graph_org_resp %></td>
+      <td><%= f.text_field :dead_graph_org_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_graph_org_fc, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_graph_org_rev %></td>
+      <td><%= f.check_box :dead_graph_org_na %></td>
+      <td><%= f.check_box :dead_graph_org_done %></td>
+    </tr>
+    <tr>
+      <td>Graphics - Schedule</td>
+      <td><%= f.text_field :dead_graph_sch_sec %></td>
+      <td><%= f.text_field :dead_graph_sch_resp %></td>
+      <td><%= f.text_field :dead_graph_sch_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_graph_sch_fc, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_graph_sch_rev %></td>
+      <td><%= f.check_box :dead_graph_sch_na %></td>
+      <td><%= f.check_box :dead_graph_sch_done %></td>
+    </tr>
+    <tr>
+      <td>Graphics -</td>
+      <td><%= f.text_field :dead_graphics_sec %></td>
+      <td><%= f.text_field :dead_graphics_resp %></td>
+      <td><%= f.text_field :dead_graphics_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_graphics_fc, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_graphics_rev %></td>
+      <td><%= f.check_box :dead_graphics_na %></td>
+      <td><%= f.check_box :dead_graphics_done %></td>
+    </tr>
+    <tr>
+      <td>Text - Work Scope</td>
+      <td><%= f.text_field :dead_text_work_scope_sec %></td>
+      <td><%= f.text_field :dead_text_work_scope_resp %></td>
+      <td><%= f.text_field :dead_text_work_scope_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_text_work_scope_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_text_work_scope_rev %></td>
+      <td><%= f.check_box :dead_text_work_scope_na %></td>
+      <td><%= f.check_box :dead_text_work_scope_done %></td>
+    </tr>
+    <tr>
+      <td>Text - Quals</td>
+      <td><%= f.text_field :dead_text_qual_sec %></td>
+      <td><%= f.text_field :dead_text_qual_resp %></td>
+      <td><%= f.text_field :dead_text_qual_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_text_qual_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_text_qual_rev %></td>
+      <td><%= f.check_box :dead_text_qual_na %></td>
+      <td><%= f.check_box :dead_text_qual_done %></td>
+    </tr>
+    <tr>
+      <td>Text - Resumes</td>
+      <td><%= f.text_field :dead_text_res_sec %></td>
+      <td><%= f.text_field :dead_text_res_resp %></td>
+      <td><%= f.text_field :dead_text_res_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_text_res_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_text_res_rev %></td>
+      <td><%= f.check_box :dead_text_res_na %></td>
+      <td><%= f.check_box :dead_text_res_done %></td>
+    </tr>
+    <tr>
+      <td>Text - Short Bios</td>
+      <td><%= f.text_field :dead_text_short_sec %></td>
+      <td><%= f.text_field :dead_text_short_resp %></td>
+      <td><%= f.text_field :dead_text_short_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_text_short_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_text_short_rev %></td>
+      <td><%= f.check_box :dead_text_short_na %></td>
+      <td><%= f.check_box :dead_text_short_done %></td>
+    </tr>
+    <tr>
+      <td>Text - Understanding of</td>
+      <td><%= f.text_field :dead_text_und_sec %></td>
+      <td><%= f.text_field :dead_text_und_resp %></td>
+      <td><%= f.text_field :dead_text_und_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_text_und_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_text_und_rev %></td>
+      <td><%= f.check_box :dead_text_und_na %></td>
+      <td><%= f.check_box :dead_text_und_done %></td>
+    </tr>
+    <tr>
+      <td>Text -</td>
+      <td><%= f.text_field :dead_text_work_scope_sec %></td>
+      <td><%= f.text_field :dead_text_work_scope_resp %></td>
+      <td><%= f.text_field :dead_text_work_scope_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_text_work_scope_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_text_work_scope_rev %></td>
+      <td><%= f.check_box :dead_text_work_scope_na %></td>
+      <td><%= f.check_box :dead_text_work_scope_done %></td>
+    </tr>
+    <tr>
+      <td>Dividers/Tabs</td>
+      <td><%= f.text_field :dead_div_tabs_sec %></td>
+      <td><%= f.text_field :dead_div_tabs_resp %></td>
+      <td><%= f.text_field :dead_div_tabs_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_div_tabs_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_div_tabs_rev %></td>
+      <td><%= f.check_box :dead_div_tabs_na %></td>
+      <td><%= f.check_box :dead_div_tabs_done %></td>
+    </tr>
+    <tr>
+      <td>Special Forms</td>
+      <td><%= f.text_field :dead_spec_form_sec %></td>
+      <td><%= f.text_field :dead_spec_form_resp %></td>
+      <td><%= f.text_field :dead_spec_form_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_spec_form_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_spec_form_rev %></td>
+      <td><%= f.check_box :dead_spec_form_na %></td>
+      <td><%= f.check_box :dead_spec_form_done %></td>
+    </tr>
+    <tr>
+      <td>Budget Estimate</td>
+      <td><%= f.text_field :dead_bud_est_sec %></td>
+      <td><%= f.text_field :dead_bud_est_resp %></td>
+      <td><%= f.text_field :dead_bud_est_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_bud_est_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_bud_est_rev %></td>
+      <td><%= f.check_box :dead_bud_est_na %></td>
+      <td><%= f.check_box :dead_bud_est_done %></td>
+    </tr>
+    <tr>
+      <td>Contract Review</td>
+      <td><%= f.text_field :dead_cont_rev_sec %></td>
+      <td><%= f.text_field :dead_cont_rev_resp %></td>
+      <td><%= f.text_field :dead_cont_rev_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_cont_rev_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_cont_rev_rev %></td>
+      <td><%= f.check_box :dead_cont_rev_na %></td>
+      <td><%= f.check_box :dead_cont_rev_done %></td>
+    </tr>
+    <tr>
+      <td>Work Examples</td>
+      <td><%= f.text_field :dead_work_ex_sec %></td>
+      <td><%= f.text_field :dead_work_ex_resp %></td>
+      <td><%= f.text_field :dead_work_ex_dd, :class => 'datepicker' %></td>
+      <td> <%= f.text_field :dead_work_ex_fd, :class => 'datepicker' %></td>
+      <td><%= f.text_field :dead_work_ex_rev %></td>
+      <td><%= f.check_box :dead_work_ex_na %></td>
+      <td><%= f.check_box :dead_work_ex_done %></td>
+    </tr>
+    <tr>
+      <td>Forms</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+
+  </table>
+
+  <div class="span2">
+    Attachments:
+  </div>
+  <div class="span4">
+    <div >
+      Customized Outline <%= f.check_box :attachments_customized_outline %>
+    </div>
+    <div>
+      Subconsultant Details <%= f.check_box :attachments_customized_outline %>
+    </div>
+  </div>
+  
+</div>
+<!-- END SECTION WRAPPER -->
+
+<!-- Start Section Wrapper -->
+<div class="section_wrapper">
+  <h4 class="section_header">
+    Subconsultants Requirment Checklist
+  </h4>
+
+  <div>
+    <div class="btn btn-green">
+      <%= link_to_add_fields "Add Subconsultant", f, :subconsultants %>
+    </div>
+  </div>
+
+  <div>
+    <%= f.fields_for :subconsultants do |builder| %>
+      <%= render "subconsultant_fields", :f => builder %>
+    <% end %>
+  </div>
+  
+</div>
+<!-- END SECTION WRAPPER -->
+
+<!-- Start Section Wrapper -->
+<div class="section_wrapper">
+  <h4 class="section_header">
+    Items Needed and Deadlines
+  </h4>
+
+  <table class="table table-striped">
+    <tr>
+      <th>Item</th>
+      <th>Due Date</th>
+      <th>Required from sub#</th>
+    </tr>
+    <tr>
+      <td>Resumes <%= f.text_field :item_needed_dead_resume_num %> page(s)</td>
+      <td><%= f.check_box :item_needed_dead_resume_due_date, :class => 'datepicker' %></td>
+      <td><%= f.text_field :item_needed_dead_resume_req_sub_num %></td>
+    </tr>
+    <tr>
+      <td>Short Bios</td>
+      <td><%= f.check_box :item_needed_dead_short_bio_due_date, :class => 'datepicker' %></td>
+      <td><%= f.text_field :item_needed_dead_short_bio_req_sub_num %></td>
+    </tr>
+    <tr>
+      <td>Firm Profile</td>
+      <td><%= f.check_box :item_needed_dead_firm_profile_due_date, :class => 'datepicker' %></td>
+      <td><%= f.text_field :item_needed_dead_firm_profile_req_sub_num %></td>
+    </tr>
+    <tr>
+      <td>Quals</td>
+      <td><%= f.check_box :item_needed_dead_quals_due_date, :class => 'datepicker' %></td>
+      <td><%= f.text_field :item_needed_dead_quals_req_sub_num %></td>
+    </tr>
+    <tr>
+      <td>Task Description</td>
+      <td><%= f.check_box :item_needed_dead_task_desc_due_date, :class => 'datepicker' %></td>
+      <td><%= f.text_field :item_needed_dead_task_desc_req_sub_num %></td>
+    </tr>
+    <tr>
+      <td>Budget Estimate</td>
+      <td><%= f.check_box :item_needed_dead_bud_est_due_date, :class => 'datepicker' %></td>
+      <td><%= f.text_field :item_needed_dead_bud_est_req_sub_num %></td>
+    </tr>
+    <tr>
+      <td>Forms and Other Items (list below):</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  
+
+
+</div>
+<!-- END SECTION WRAPPER -->
+
+  <div class="actions center">
+    <%= f.submit 'Submit Proposal', :class => 'btn btn-green' %>
+  </div>
+<% end %>

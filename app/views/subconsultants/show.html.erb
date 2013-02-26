@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Firm name:</b>
+  <%= @subconsultant.firm_name %>
+</p>
+
+<p>
+  <b>Contact name:</b>
+  <%= @subconsultant.contact_name %>
+</p>
+
+<p>
+  <b>Contact address:</b>
+  <%= @subconsultant.contact_address %>
+</p>
+
+<p>
+  <b>Contact phone:</b>
+  <%= @subconsultant.contact_phone %>
+</p>
+
+<p>
+  <b>Contact fax:</b>
+  <%= @subconsultant.contact_fax %>
+</p>
+
+<p>
+  <b>Contact email:</b>
+  <%= @subconsultant.contact_email %>
+</p>
+
+
+<%= link_to 'Edit', edit_subconsultant_path(@subconsultant) %> |
+<%= link_to 'Back', subconsultants_path %>

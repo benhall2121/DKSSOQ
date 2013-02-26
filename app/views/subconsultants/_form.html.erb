@@ -1,0 +1,41 @@
+<%= form_for(@subconsultant) do |f| %>
+  <% if @subconsultant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subconsultant.errors.count, "error") %> prohibited this subconsultant from being saved:</h2>
+
+      <ul>
+      <% @subconsultant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :firm_name %><br />
+    <%= f.text_field :firm_name %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_name %><br />
+    <%= f.text_field :contact_name %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_address %><br />
+    <%= f.text_area :contact_address %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_phone %><br />
+    <%= f.text_field :contact_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_fax %><br />
+    <%= f.text_field :contact_fax %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_email %><br />
+    <%= f.text_field :contact_email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
