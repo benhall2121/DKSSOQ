@@ -4,6 +4,6 @@ class DkssoqMailer < ActionMailer::Base
   
   def proposal_email(proposal)
     @proposal = proposal
-    mail(:to => "ben@benerino.com", :subject => "ANUM: #{proposal.anum} - A new proposal has been made.")
+    mail(:to => "rsh@dksassociates.com", :subject => "ANUM: #{proposal.anum} - A new proposal has been made.")
   end
 end

@@ -45,7 +45,7 @@ class ProposalsController < ApplicationController
     respond_to do |format|
       if @proposal.save
         DkssoqMailer.proposal_email(@proposal).deliver
-        format.html { redirect_to @proposal, notice: 'Proposal was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Proposal was successfully created.' }
         format.json { render json: @proposal, status: :created, location: @proposal }
       else
         format.html { render action: "new" }
